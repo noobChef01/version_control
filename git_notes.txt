@@ -11,13 +11,7 @@ detached Head: in a different commit than the latest commit
 
 HEAD: current commit
 
-git status: which files have changed since the last commit
-
-git init: Initialize a repo in a directory
-
-git reset: remove a file from staging area if accidently added
-
-git staging area: Intermediate area to choose what files need to be committed. 
+staging area normally shows the lastest commit
  
 
 Note:
@@ -37,4 +31,20 @@ git log --stat: the list of files that got changed in a commit and other useful 
 git config --global color.ui auto: get colored outputs
 
 git checkout id: go to a different version
+
+git status: which files have changed since the last commit
+
+git init: Initialize a repo in a directory
+
+git reset: remove a file from staging area if accidently added
+
+git staging area: Intermediate area to choose what files need to be committed. 
+
+git checkout master: go to current master brach commit
+
+git diff with no args: gives the difference between the working directory and the staging area
+
+git diff --staged: difference between the staging and current commit
+
+git reset --hard: reverse any changes to working directory and staging area
 
