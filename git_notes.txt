@@ -1,0 +1,40 @@
+Theory:
+-------
+
+Repository: The project files that need to be tracked together after each logical change (The collection of files/project)
+
+commit: snapshot of the project when we decided to commit
+
+detached Head: in a different commit than the latest commit
+
+.git directory: hidden file to store meta data about the files in you repo, to see type ls -a 
+
+HEAD: current commit
+
+git status: which files have changed since the last commit
+
+git init: Initialize a repo in a directory
+
+git reset: remove a file from staging area if accidently added
+
+git staging area: Intermediate area to choose what files need to be committed. 
+ 
+
+Note:
+-----
+Ubuntu
+To copy and paste within the terminal on Ubuntu, use Ctrl+Shift+C and Ctrl+Shift+V.
+
+Commands:
+---------
+
+git log: display the commits log for the repo
+
+git diff: get difference between two commits, needs commit id (Min: first 4 chars of id)
+
+git log --stat: the list of files that got changed in a commit and other useful info
+
+git config --global color.ui auto: get colored outputs
+
+git checkout id: go to a different version
+
