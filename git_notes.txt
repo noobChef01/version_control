@@ -11,8 +11,33 @@ detached Head: in a different commit than the latest commit
 
 HEAD: current commit
 
-staging area normally shows the lastest commit
+Staging area normally shows the lastest commit
  
+Branching: Make a new branch of the project for  a new feature, then merge it adterwards. Basically labels for a feature line
+
+Master: main branch, which is the production ready version, never breaks, always create a new branch to add a new feature, bug fix , anything, but master never breaks.
+
+two branches can the same snapshot, but when comitted the one which is checked out is only updated
+
+Each commit tracks the meta data of the parent, but for the brach labels they keep track of the tip of the branch as well
+
+Merging of two commits makes it keep track of two of the parents which were merged. When a branch is merged into the master the master is made the tip of the combined branch.
+
+For merging two branches the original commit where the two branches diverged is a must to know which lines to keep in the final commit.
+
+Deleting a branch deletes the label only, but do it after a merge only, otherwise before a merge if done the commits will be unreachable. The commits are not deleted only the label.
+
+
+Merging two branches shows the log now sorted with time-stamp, now we can diff
+
+git merge always merges all the specified branches into the currently checked out branch, creating a new commit for that branch. (So the checked out branch is important during commit, this is the branch which now becomes the tip of the commit)
+
+When resolving the merge commits remove the messages and remove the lines not required.
+
+Initialize the repo with a readme if you are creating the repo at Github else don't as you will already have a commit.
+
+GitHub: store and share repos
+
 
 Note:
 -----
@@ -49,4 +74,22 @@ git diff with no args: gives the difference between the working directory and th
 git diff --staged: difference between the staging and current commit (when modified files have been added to staging but not committed)
 
 git reset --hard: reverse any changes to working directory and staging area
+
+git brach: display all branches 
+
+git branch name: create a new branch
+
+git checkout branch_name 
+
+git log --graph --oneline branch_name1 branch_name2: Show a graphical representaion where the specified branches diverged (in one commit message lines ).
+
+git checkout -b branch_name: creata and checkout a new branch on the commit you are currently in.
+
+git show commit_id: gets the diff between the commit_id and its parent commit_id (without knowing the actual parent commit_id)
+
+git branch -d branch_name: delete a branch labels, but not the commits.
+
+git config --global core.autocrlf true: use the same newline char for both windows, mac and linux.
+
+
 
