@@ -19,6 +19,8 @@ Note:
 Ubuntu
 To copy and paste within the terminal on Ubuntu, use Ctrl+Shift+C and Ctrl+Shift+V.
 
+Windows: copy is ctrl+C but paste is shift+insert
+
 Commands:
 ---------
 
@@ -42,9 +44,9 @@ git staging area: Intermediate area to choose what files need to be committed.
 
 git checkout master: go to current master brach commit
 
-git diff with no args: gives the difference between the working directory and the staging area
+git diff with no args: gives the difference between the working directory and the staging area (when files are changed but not added to staging) 
 
-git diff --staged: difference between the staging and current commit
+git diff --staged: difference between the staging and current commit (when modified files have been added to staging but not committed)
 
 git reset --hard: reverse any changes to working directory and staging area
 
