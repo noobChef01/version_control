@@ -36,7 +36,21 @@ When resolving the merge commits remove the messages and remove the lines not re
 
 Initialize the repo with a readme if you are creating the repo at Github else don't as you will already have a commit.
 
+Forking: This is basically cloning on Github.
+
+When cloning a repo, a remote is automatically added in your local for that repo
+
 GitHub: store and share repos
+
+When cloning a repo the origin (origin remote) is automatically set for you, there no need to run git remote (since the remote is which connected to local system origin)
+
+When using pull to merge origin/master to local master , do git pull origin master. But when there is changes in both local and origin repo you need to git fetch origin first then merge to master origin/master.
+
+origin/master: The origin repo side commit history 
+
+After resolving a commit history you need to stage and commit the resolved file
+
+Pull request: when you make changes to a shared repo, and want them to be updated to master you can raise a pull request for you change branch to be pull and merged into origin repo by another person (copied in github). done in github and can leave comments and all. When both have a change branch, one lets is merge into the origin/master through pull request and then pull it to his local and if there is now a conflict then he makes the change and merges the master to change branch and pushes it so that the other person can approve it.(The other person needs to approve it if not then merge the master to change for approval)
 
 
 Note:
@@ -90,6 +104,20 @@ git show commit_id: gets the diff between the commit_id and its parent commit_id
 git branch -d branch_name: delete a branch labels, but not the commits.
 
 git config --global core.autocrlf true: use the same newline char for both windows, mac and linux.
+
+git remote: show all remotes or origin and other working computers of sources
+
+git remote add name url: add a remote
+
+git remote -v: Verbose out of all remotes
+
+git push your_repo_name branch_name: origin for your computer and branch name for which to push
+
+git pull repo_name branch: pull the commits from the repo and merge into local repo
+
+git fetch repo_name: use this when there is change in both origin repo and local repo 
+
+git merge repo/branch branch_local
 
 
 
