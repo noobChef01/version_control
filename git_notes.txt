@@ -120,4 +120,6 @@ git fetch repo_name: use this when there is change in both origin repo and local
 git merge repo/branch branch_local
 
 
+git: Show difference between local and remote branches
 
+git fetch origin ; git diff --name-only master origin/master 
